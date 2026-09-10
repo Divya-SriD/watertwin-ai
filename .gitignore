@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+service-account*.json
+*-credentials.json
+
+# Node
+node_modules/
+frontend/node_modules/
+
+# Frontend build output
+frontend/dist/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Firebase local files
+.firebase/
+
+# Archives / temporary artifacts
+*.zip
+*.tmp
+*.temp
+
+# WaterTwin development history / local validation artifacts
+*_milestone*.py
+*_before_*.py
+*_failed_attempt.py
+backup_*/
+*_raw.txt
+*_local_fixed.txt
+*_container_result.json
+*_api_result.json
+s*_cloudrun_*.json
+s*_cloudrun_*.txt
+evaluation_s1_s2_s6_s7.json
+evaluation_s2_s6_s7.json
+WATERTWIN_TECHNICAL_REVIEW_BACKLOG.md
+
+# Local development test
+test_gemini.py

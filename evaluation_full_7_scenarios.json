@@ -1,0 +1,339 @@
+{
+  "evaluation_version": "WT-16-v1",
+  "project_id": "project-4e41dc93-8aec-4f29-8fd",
+  "dataset": "water_twin",
+  "source_files": [
+    "s1_cloudrun_result.json",
+    "s2_cloudrun_result.json",
+    "s3_cloudrun_result.json",
+    "s4_cloudrun_result.json",
+    "s5_cloudrun_result.json",
+    "s6_cloudrun_result.json",
+    "s7_cloudrun_result.json"
+  ],
+  "scenarios": [
+    {
+      "scenario_id": "S1",
+      "scenario_name": "Normal consumption",
+      "ground_truth": {
+        "anomaly": false,
+        "cause": "NORMAL",
+        "expected_decision": "NO_ACTION"
+      },
+      "prediction": {
+        "anomaly": false,
+        "cause": "NORMAL",
+        "decision": "NO_ACTION",
+        "confidence": "HIGH"
+      },
+      "metrics": {
+        "anomaly_correct": true,
+        "root_cause_correct": true,
+        "decision_correct": true,
+        "abstention_expected": false,
+        "abstention_correct": null,
+        "unsafe_abstention_case": false,
+        "intervention_quality": null,
+        "intervention_quality_status": "NOT_APPLICABLE"
+      },
+      "evidence": {
+        "significant_consumption_observations": 0,
+        "consumption_anomaly_rate_pct": 0.0
+      },
+      "intervention": {
+        "action_id": null,
+        "category": null,
+        "selected": false,
+        "estimated_cost": 0.0,
+        "estimated_water_savings_litres_per_day": 0.0,
+        "estimated_water_savings_litres_per_year": 0.0
+      },
+      "orchestration_status": "SUCCESS"
+    },
+    {
+      "scenario_id": "S2",
+      "scenario_name": "Continuous flow / leak",
+      "ground_truth": {
+        "anomaly": true,
+        "cause": "LEAK",
+        "expected_decision": "RECOMMEND"
+      },
+      "prediction": {
+        "anomaly": true,
+        "cause": "LEAK",
+        "decision": "RECOMMEND",
+        "confidence": "HIGH"
+      },
+      "metrics": {
+        "anomaly_correct": true,
+        "root_cause_correct": true,
+        "decision_correct": true,
+        "abstention_expected": false,
+        "abstention_correct": null,
+        "unsafe_abstention_case": false,
+        "intervention_quality": true,
+        "intervention_quality_status": "CORRECT"
+      },
+      "evidence": {
+        "significant_consumption_observations": 256,
+        "consumption_anomaly_rate_pct": 17.78
+      },
+      "intervention": {
+        "action_id": "I_LEAK_INSPECTION",
+        "category": "LEAK",
+        "selected": true,
+        "estimated_cost": 1500.0,
+        "estimated_water_savings_litres_per_day": 4210.21,
+        "estimated_water_savings_litres_per_year": 1536726.65
+      },
+      "orchestration_status": "SUCCESS"
+    },
+    {
+      "scenario_id": "S3",
+      "scenario_name": "Pressure anomaly",
+      "ground_truth": {
+        "anomaly": true,
+        "cause": "PRESSURE_ANOMALY",
+        "expected_decision": "RECOMMEND"
+      },
+      "prediction": {
+        "anomaly": true,
+        "cause": "PRESSURE_ANOMALY",
+        "decision": "RECOMMEND",
+        "confidence": "HIGH"
+      },
+      "metrics": {
+        "anomaly_correct": true,
+        "root_cause_correct": true,
+        "decision_correct": true,
+        "abstention_expected": false,
+        "abstention_correct": null,
+        "unsafe_abstention_case": false,
+        "intervention_quality": true,
+        "intervention_quality_status": "CORRECT"
+      },
+      "evidence": {
+        "significant_consumption_observations": 3,
+        "consumption_anomaly_rate_pct": 0.21
+      },
+      "intervention": {
+        "action_id": "I_PRESSURE_DIAGNOSTIC",
+        "category": "PRESSURE_ANOMALY",
+        "selected": true,
+        "estimated_cost": 1000.0,
+        "estimated_water_savings_litres_per_day": 0.0,
+        "estimated_water_savings_litres_per_year": 0.0
+      },
+      "orchestration_status": "SUCCESS"
+    },
+    {
+      "scenario_id": "S4",
+      "scenario_name": "Occupancy increase",
+      "ground_truth": {
+        "anomaly": true,
+        "cause": "OCCUPANCY_DRIVEN",
+        "expected_decision": "EXPLAIN"
+      },
+      "prediction": {
+        "anomaly": true,
+        "cause": "OCCUPANCY_DRIVEN",
+        "decision": "EXPLAIN",
+        "confidence": "HIGH"
+      },
+      "metrics": {
+        "anomaly_correct": true,
+        "root_cause_correct": true,
+        "decision_correct": true,
+        "abstention_expected": false,
+        "abstention_correct": null,
+        "unsafe_abstention_case": false,
+        "intervention_quality": null,
+        "intervention_quality_status": "NOT_APPLICABLE"
+      },
+      "evidence": {
+        "significant_consumption_observations": 335,
+        "consumption_anomaly_rate_pct": 23.26
+      },
+      "intervention": {
+        "action_id": null,
+        "category": null,
+        "selected": false,
+        "estimated_cost": 0.0,
+        "estimated_water_savings_litres_per_day": 0.0,
+        "estimated_water_savings_litres_per_year": 0.0
+      },
+      "orchestration_status": "SUCCESS"
+    },
+    {
+      "scenario_id": "S5",
+      "scenario_name": "Weather-driven increase",
+      "ground_truth": {
+        "anomaly": true,
+        "cause": "WEATHER_DRIVEN",
+        "expected_decision": "EXPLAIN"
+      },
+      "prediction": {
+        "anomaly": true,
+        "cause": "WEATHER_DRIVEN",
+        "decision": "EXPLAIN",
+        "confidence": "HIGH"
+      },
+      "metrics": {
+        "anomaly_correct": true,
+        "root_cause_correct": true,
+        "decision_correct": true,
+        "abstention_expected": false,
+        "abstention_correct": null,
+        "unsafe_abstention_case": false,
+        "intervention_quality": null,
+        "intervention_quality_status": "NOT_APPLICABLE"
+      },
+      "evidence": {
+        "significant_consumption_observations": 327,
+        "consumption_anomaly_rate_pct": 22.71
+      },
+      "intervention": {
+        "action_id": null,
+        "category": null,
+        "selected": false,
+        "estimated_cost": 0.0,
+        "estimated_water_savings_litres_per_day": 0.0,
+        "estimated_water_savings_litres_per_year": 0.0
+      },
+      "orchestration_status": "SUCCESS"
+    },
+    {
+      "scenario_id": "S6",
+      "scenario_name": "Sensor anomaly",
+      "ground_truth": {
+        "anomaly": true,
+        "cause": "SENSOR_ANOMALY",
+        "expected_decision": "ABSTAIN"
+      },
+      "prediction": {
+        "anomaly": true,
+        "cause": "SENSOR_ANOMALY",
+        "decision": "ABSTAIN",
+        "confidence": "LOW"
+      },
+      "metrics": {
+        "anomaly_correct": true,
+        "root_cause_correct": true,
+        "decision_correct": true,
+        "abstention_expected": true,
+        "abstention_correct": true,
+        "unsafe_abstention_case": false,
+        "intervention_quality": null,
+        "intervention_quality_status": "NOT_APPLICABLE"
+      },
+      "evidence": {
+        "significant_consumption_observations": 315,
+        "consumption_anomaly_rate_pct": 21.88
+      },
+      "intervention": {
+        "action_id": null,
+        "category": null,
+        "selected": false,
+        "estimated_cost": 0.0,
+        "estimated_water_savings_litres_per_day": 0.0,
+        "estimated_water_savings_litres_per_year": 0.0
+      },
+      "orchestration_status": "SUCCESS"
+    },
+    {
+      "scenario_id": "S7",
+      "scenario_name": "Conflicting evidence",
+      "ground_truth": {
+        "anomaly": true,
+        "cause": "AMBIGUOUS",
+        "expected_decision": "ABSTAIN"
+      },
+      "prediction": {
+        "anomaly": true,
+        "cause": "AMBIGUOUS",
+        "decision": "ABSTAIN",
+        "confidence": "LOW"
+      },
+      "metrics": {
+        "anomaly_correct": true,
+        "root_cause_correct": true,
+        "decision_correct": true,
+        "abstention_expected": true,
+        "abstention_correct": true,
+        "unsafe_abstention_case": false,
+        "intervention_quality": null,
+        "intervention_quality_status": "NOT_APPLICABLE"
+      },
+      "evidence": {
+        "significant_consumption_observations": 207,
+        "consumption_anomaly_rate_pct": 14.37
+      },
+      "intervention": {
+        "action_id": null,
+        "category": null,
+        "selected": false,
+        "estimated_cost": 0.0,
+        "estimated_water_savings_litres_per_day": 0.0,
+        "estimated_water_savings_litres_per_year": 0.0
+      },
+      "orchestration_status": "SUCCESS"
+    }
+  ],
+  "summary": {
+    "scenario_count": 7,
+    "scenario_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7"
+    ],
+    "complete_7_scenario_coverage": true,
+    "missing_scenarios": [],
+    "all_orchestrations_successful": true,
+    "anomaly_detection": {
+      "correct": 7,
+      "total": 7,
+      "accuracy_pct": 100.0,
+      "false_positive_rate_pct": 0.0,
+      "normal_cases": 1,
+      "false_positives": 0,
+      "note": "False-positive rate is undefined when no ground-truth normal scenario is supplied."
+    },
+    "decision_accuracy": {
+      "correct": 7,
+      "total": 7,
+      "accuracy_pct": 100.0
+    },
+    "root_cause_accuracy": {
+      "correct": 7,
+      "total": 7,
+      "accuracy_pct": 100.0
+    },
+    "abstention_behavior": {
+      "expected_abstention_cases": 2,
+      "correct_abstentions": 2,
+      "abstention_accuracy_pct": 100.0,
+      "unsafe_non_abstentions": 0
+    },
+    "normal_case_safety": {
+      "normal_cases": 1,
+      "decision_false_positive_rate_pct": 0.0,
+      "normal_cases_with_non_no_action_decision": 0
+    },
+    "intervention_quality": {
+      "actionable_recommendation_cases": 2,
+      "correct_interventions": 2,
+      "quality_pct": 100.0
+    },
+    "selected_intervention_impact": {
+      "selected_intervention_count": 2,
+      "estimated_total_cost": 2500.0,
+      "estimated_total_water_savings_litres_per_day": 4210.21,
+      "estimated_total_water_savings_litres_per_year": 1536726.65,
+      "note": "Impact is the sum of deterministic simulator outputs from selected interventions; it is an estimate, not measured savings."
+    }
+  }
+}
