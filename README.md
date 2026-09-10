@@ -264,8 +264,8 @@ The MVP contains seven controlled scenarios:
 | **S1** | Normal consumption | NO_ACTION |
 | **S2** | Continuous flow / leak | RECOMMEND |
 | **S3** | Pressure anomaly | RECOMMEND |
-| **S4** | Occupancy increase | EXPLAIN |
-| **S5** | Weather-driven increase | EXPLAIN |
+| **S4** | Occupancy change | EXPLAIN |
+| **S5** | Weather-driven demand change | EXPLAIN |
 | **S6** | Sensor anomaly | ABSTAIN |
 | **S7** | Conflicting evidence | ABSTAIN |
 
