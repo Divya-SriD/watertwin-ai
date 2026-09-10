@@ -576,7 +576,7 @@ Water efficiency is increasingly important as communities and infrastructure ope
 
 - Water scarcity
 - Climate variability
-- Increasing demand
+- Increasing / decreasing demand
 - Aging infrastructure
 - Leakage and non-revenue water
 - Operational inefficiency
